@@ -1,0 +1,69 @@
+/* Set default font */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container */
+.content {
+    max-width: 600px;
+    width: 100%;
+    padding: 40px;
+    border: 1px solid black;
+    /*border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the titles inside */
+}
+
+/* Main Title */
+.title h1 {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.title h2 {
+    font-size: 16px;
+    color: #006EB6;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+
+}
+
+.title h2::after {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: 10px auto 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Main text */
+main p {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Ordered List */
+.does-list {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/* Logo at the bottom */
+.logo {
+    margin-top: 30px;
+    width: 150px; /* Resize logo smaller */
+}
+
+  

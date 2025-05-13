@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+    --primary-color: #52489c;
+    --secondary-color: #59c3c3;
+    --accent-color: #f45b69;
+    --text-dark: #333;
+    --text-light: #ebebeb;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: 'Mooli', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 1.2em;
+    color: var(--text-dark);
+}
+
+h1 {
+    font-family: var(--secondary-font);
+    color: white;
+    text-align: center;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+
+header, footer {
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery figure {
+    width: 100%; /* Full width in narrow view */
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
+    gap: 10px; /* Adds spacing between images */
+}
+
+.gallery figure {
+    text-align: center;
+}
+
+.gallery img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+
+.menu {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-dark);
+    cursor: pointer;
+    padding: 10px;
+}
+.menu:hover {
+    color: var(--accent-color); /* Changes color on hover */
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two-column layout */
+        gap: 10px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
+    }
+
+    nav ul {
+        display: flex;
+        gap: 20px;
+        justify-content: center; /* Center navigation links */
+    }
+
+    .menu {
+        display: none; /* Hide the menu button */
+    }
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto; /* Centers the content */
+}
+
+nav ul {
+    list-style: none; /* Removes default bullets */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Helps with horizontal alignment */
+}
+
+nav a {
+    text-decoration: underline; /* Ensures a line under links */
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+nav a:hover {
+    text-decoration: none; /* Optional: removes underline on hover */
+    color: var(--accent-color);
+}
+
+
+

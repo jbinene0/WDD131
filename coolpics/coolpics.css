@@ -10,17 +10,34 @@
     --secondary-font: 'Mooli', sans-serif;
 }
 
+
 body {
+    margin: 0;
     font-family: var(--primary-font);
     font-size: 1.2em;
+    background: #f8f8f8;
     color: var(--text-dark);
 }
 
 h1 {
     font-family: var(--secondary-font);
-    color: white;
     text-align: center;
+    color: white;
+    margin: 0;
 }
+
+
+.title {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    height: 150px; 
+    width: 100%;
+    text-align: center;
+    background-color: #333; 
+    position: relative;
+}
+
 
 a {
     color: var(--accent-color);
@@ -32,108 +49,144 @@ a:hover {
     text-decoration: underline;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.top-link {
+    display: block;
+    background: #222;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.top-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 
 header, footer {
-    background-color: #222; /* Dark background */
-    color: #fff; /* White text */
+    background-color: #222;
+    color: #fff;
     text-align: center;
     padding: 10px;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+footer p {
+    margin: 0.5rem 0;
 }
 
-.gallery {
+
+.title {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    gap: 0.5rem;
 }
 
-.gallery figure {
-    width: 100%; /* Full width in narrow view */
-    text-align: center;
+.title h1 {
+    margin: 0;
 }
+
+
+.menu {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu:hover {
+    color: var(--accent-color);
+}
+
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li {
+    margin: 0.5rem 0;
+}
+
+.main-menu a {
+    color: white;
+    font-size: 1rem;
+}
+
+.main-menu a:hover {
+    text-decoration: underline;
+}
+
+
+.hide {
+    display: none;
+}
+
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates a 3-column layout */
-    gap: 10px; /* Adds spacing between images */
-}
-
-.gallery figure {
-    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    padding: 1rem;
 }
 
 .gallery img {
     width: 250px;
     height: 250px;
     object-fit: cover;
-    border-radius: 5px; /* Optional: Adds rounded corners */
+    border-radius: 5px;
 }
 
-.menu {
-    background: none;
+
+.image-viewer {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
     border: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--text-dark);
-    cursor: pointer;
-    padding: 10px;
-}
-.menu:hover {
-    color: var(--accent-color); /* Changes color on hover */
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
 }
 
-@media screen and (min-width: 700px) {
-    .gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Two-column layout */
-        gap: 10px;
-    }
+.image-viewer[open] {
+    display: flex; 
 }
 
-@media screen and (min-width: 1000px) {
-    .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Three-column layout */
-    }
-
-    nav ul {
-        display: flex;
-        gap: 20px;
-        justify-content: center; /* Center navigation links */
-    }
-
-    .menu {
-        display: none; /* Hide the menu button */
-    }
+.image-viewer img {
+    width: 90%;
+    max-height: 100%;
+    margin: 20vh auto;
 }
 
-.content {
-    max-width: 1200px;
-    margin: auto; /* Centers the content */
-}
-
-nav ul {
-    list-style: none; /* Removes default bullets */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Helps with horizontal alignment */
-}
-
-nav a {
-    text-decoration: underline; /* Ensures a line under links */
+.close-viewer {
+    position: absolute;
+    top: 5px; 
+    right: 5px; 
+    background: rgba(0, 0, 0, 0.5); 
     color: white;
-    font-size: 18px;
+    border: none;
     padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 20; 
 }
-
-nav a:hover {
-    text-decoration: none; /* Optional: removes underline on hover */
-    color: var(--accent-color);
-}
-
-
-

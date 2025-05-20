@@ -7,16 +7,18 @@
     <meta name="author" content="Jonathan Binene">
     <title>Cool Pics</title>
     <link rel="stylesheet" href="coolpics.css">
-    <nav>
-        <a href="coolpics/index.html">coolpics</a>
-    </nav>    
+ 
 </head>
 <body>
+    <nav class="top-link">
+        <a href="coolpics/index.html">coolpics</a>
+    </nav>   
+    
     <div class="content">
         <header class="title">
             <button class="menu">Menu</button>
             <h1>Cool Pics 📷</h1>
-            <nav>
+            <nav class="hide">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">People</a></li>
@@ -24,20 +26,20 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
-            </nav>
+            </nav>                          
         </header>
         <main>
             <h1>Current Work</h1>
             <section class="gallery">
                 <figure><img src="norris-sm.jpeg" alt="picture1"></figure>
-                <figure><img src="norris-full.jpeg" alt="picture2"></figure>
-                <figure><img src="norris-full.jpeg" alt="picture 3"></figure>    
-                <figure><img src="norris-full.jpeg" alt="picture 4"></figure>    
-                <figure><img src="norris-full.jpeg" alt="picture 5"></figure>    
-                <figure> <img src="norris-full.jpeg" alt="picture 6"></figure>   
-                <figure><img src="norris-full.jpeg" alt="picture 7"></figure>    
-                <figure><img src="norris-full.jpeg" alt="picture 8"></figure>    
-                <figure><img src="norris-full.jpeg" alt="picture 9"></figure>    
+                <figure><img src="norris-sm.jpeg" alt="picture2"></figure>
+                <figure><img src="norris-sm.jpeg" alt="picture 3"></figure>    
+                <figure><img src="norris-sm.jpeg" alt="picture 4"></figure>    
+                <figure><img src="norris-sm.jpeg" alt="picture 5"></figure>    
+                <figure> <img src="norris-sm.jpeg" alt="picture 6"></figure>   
+                <figure><img src="norris-sm.jpeg" alt="picture 7"></figure>    
+                <figure><img src="norris-sm.jpeg" alt="picture 8"></figure>    
+                <figure><img src="norris-sm.jpeg" alt="picture 9"></figure>    
             </section>
 
         </main>
@@ -47,6 +49,11 @@
     </div>
 
 
-<script src="coolpics.js"></script> 
+
+    <dialog class="image-viewer">
+        <img class = "modal-image" src="" alt="Expanded viewer" />
+        <button class="close-viewer">X</button>
+    </dialog>
+    <script src="coolpics.js"></script> 
 </body>
 </html>

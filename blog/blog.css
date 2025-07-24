@@ -1,97 +1,130 @@
-
+/* Base styles */
 body {
-    font-family: 'Times New Roman', Times, serif;
-    background-color: white;
-    color: #473144;
-    margin: 0;
-}
-
-h1 {
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
-    padding: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: white;
+  color: #473144;
+  margin: 0;
 }
 
 h1, h2 {
-    font-family: 'Times New Roman';
-    color: black;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
 }
 
-nav .main-nav {
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    justify-content: end;
-    padding: 15px 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    border-top: 2px solid #AF1B3F;
-    border-bottom: 2px solid #AF1B3F;
-}
-
-nav ul li {
-    text-align: center;
-    padding: 10px;
-    
-}
-
-nav ul li a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: #AF1B3F;
-    font-size: 1.2rem;
-}
-
-.book-reviews {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-}
-
-.book {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    background-color: white;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-.book img {
-    max-width: 100%;
-}
-
-.skiptocontent a {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #AF1B3F;
-    color: white;
-    padding: 10px;
-}
-
-.skiptocontent a:focus {
-    top: 0;
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px;
 }
 
 p {
-    line-height: 1.5;
-    color: #473144;
+  line-height: 1.5;
+  color: #473144;
 }
 
+/* Navigation styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  border-top: 2px solid #AF1B3F;
+  border-bottom: 2px solid #AF1B3F;
+}
+
+nav .main-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-content: end;
+  padding: 15px 0;
+}
+
+nav ul li {
+  text-align: center;
+  padding: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #AF1B3F;
+  font-size: 1.2rem;
+}
+
+/* Skip link accessibility */
 .skiptocontent a {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #AF1B3F;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    font-weight: bold;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #AF1B3F;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .skiptocontent a:focus {
-    top: 0;
+  top: 0;
 }
+
+/* Layout structure */
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.book-reviews {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+article.book {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color: white;
+  padding: 15px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+/* Book details column */
+.book-details {
+  text-align: right;
+  border-right: 2px solid #ccc;
+  padding: 0 1rem;
+  line-height: 1.4;
+  font-size: 1rem;
+}
+
+.book-details .date {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Book content column */
+.book-content {
+  padding-left: 1rem;
+}
+
+.book-content h2 {
+  margin-top: 0.3rem; /* Helps align with .date */
+}
+
+.book-content img {
+  display: block;
+  margin: 1rem auto;
+  max-width: 200px;
+  height: auto;
+}
+
+.book-content .description {
+  margin-top: 1rem;
+}
+
+/* Add spacing between dynamically injected articles */
+article + article {
+  margin-top: 2rem;
+}
+

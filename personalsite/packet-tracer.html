@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Packet Tracer Network Topology by Jonathan Binene" />
+  <title>Packet Tracer Network | Jonathan Binene</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">
+      <img src="Copilot_20250712_225428.webp" alt="Jonathan Binene Logo" />
+    </div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="project-detail">
+    <h1 class="page-title">Packet Tracer Network Design</h1>
+
+    <section class="screenshot-section">
+      <img src="Screenshot 2025-07-26 190706.webp" alt="Packet Tracer Topology" class="project-img large" />
+      <p class="caption">Full network topology built in Cisco Packet Tracer</p>
+    </section>
+
+    <section class="project-writeup">
+      <h2>Project Overview</h2>
+      <p>This project simulates a secure small business network using Cisco Packet Tracer. It models remote site connectivity using an IPsec VPN tunnel to ensure encrypted communication across different subnets. The setup includes routers, switches, and end devices, with static routing configured to enable subnet-to-subnet traffic while preserving network segmentation.</p>
+
+      <h2>Key Features</h2>
+      <ul>
+        <li>🟢 IPsec VPN configured between two or more remote routers</li>
+        <li>🟡 IP addressing scheme: 192.168.1.0/24, 192.168.2.0/24, 192.168.3.0/24</li>
+        <li>🔵 Static routing between subnets over the VPN tunnel</li>
+        <li>🔐 End devices securely communicate using encrypted channels</li>
+      </ul>
+
+      <h2>Challenges & Lessons</h2>
+      <p>Configuring the IPsec VPN was crucial for secure inter-site traffic. I learned how to verify encrypted connections and troubleshoot routing issues with `ping` and `tracert`. This exercise deepened my understanding of VPN architecture, static routing, and subnet design.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <p>Contact: jonathan@example.com | <a href="#">LinkedIn</a> | <a href="#">GitHub</a></p>
+  </footer>
+</body>
+</html>
